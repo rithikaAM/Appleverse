@@ -1,0 +1,104 @@
+/* Container styling remains as in your updated code */
+.create-apple-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading improvements */
+.create-apple-container h2 {
+  font-size: 28px;       /* larger font size */
+  font-weight: 700;      /* bolder text */
+  color: #333;           /* darker text color for contrast */
+  text-align: center;    /* center it */
+  margin-bottom: 20px;   /* add spacing below heading */
+}
+
+/* Rest of your form styles remain unchanged */
+
+/* Example for the form */
+.create-apple-form > div {
+  margin-bottom: 20px;
+}
+
+.create-apple-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.create-apple-form input[type="text"],
+.create-apple-form input[type="date"],
+.create-apple-form input[type="file"] {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+
+.create-apple-form input[type="text"]:focus,
+.create-apple-form input[type="date"]:focus,
+.create-apple-form input[type="file"]:focus {
+  outline: none;
+  border-color: #040404;
+}
+
+/* Submit button */
+.create-apple-form button {
+  display: block;
+  width: 50%;
+  margin: 20px auto 0;
+  padding: 12px 20px;
+  background-color: #040404;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.create-apple-form button:hover {
+  background-color: #333;
+}
+
+/* Extra fields (if any) */
+.extra-field {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.extra-field input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.extra-field button {
+  background-color: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.extra-field button:hover {
+  background-color: #e74c3c;
+}

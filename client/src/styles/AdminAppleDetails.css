@@ -1,0 +1,139 @@
+/* AdminAppleDetails.css */
+
+.admin-details-container {
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.admin-details-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.admin-details-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.heading-col {
+  background-color: var(--details-heading-bg);
+  color: var(--details-heading-text);
+  font-weight: bold;
+  width: 30%;
+}
+
+.detail-col {
+  width: 70%;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #555;
+}
+
+/* --- New Toggle + Layout Styles --- */
+
+/* A parent container for the toggle and button, left-aligned */
+.admin-details-bottom {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Puts the switch and label side by side */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* spacing between switch and label */
+}
+
+/* The switch itself */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+/* Hide the default checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+/* Slider background */
+.slider {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+/* The circle knob */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Toggle ON state */
+.toggle-switch input:checked + .slider {
+  background-color: #2196f3;
+}
+
+/* Move the knob to the right */
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Round the slider */
+.slider.round {
+  border-radius: 26px;
+}
+
+/* Label next to the toggle */
+.toggle-label {
+  font-size: 16px;
+  user-select: none; /* optional: prevent accidental text selection */
+}

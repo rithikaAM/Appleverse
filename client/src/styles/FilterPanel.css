@@ -1,0 +1,75 @@
+/* FilterPanel.css */
+
+/* Main container for the filter panel */
+.filter-panel {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+
+  /* Use a responsive grid to arrange filter rows neatly */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 20px;
+}
+
+/* Optional heading inside the filter panel */
+.filter-panel h3 {
+  grid-column: 1 / -1; /* span all columns if you use a heading */
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+}
+
+/* Each filter row or group */
+.filter-row,
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label for each filter */
+.filter-row label,
+.filter-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Inputs */
+.filter-row input,
+.filter-group input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.filter-row input:focus,
+.filter-group input:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* RESET BUTTON STYLES */
+.reset-button {
+  grid-column: 1 / -1; /* span all columns, so it sits below everything */
+  justify-self: center; /* center horizontally */
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4cf908;
+  color: #0c0000;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #34f105;
+}

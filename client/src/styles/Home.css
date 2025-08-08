@@ -1,0 +1,270 @@
+/* Home.css */
+
+.home-container {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("../assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Search */
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  width: 350px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #28a745;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Filter Panel */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+  background: var(--filter-bg, #fff);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--label-color, #333);
+}
+
+.filter-group select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* Table View */
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.summary-table th,
+.summary-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.summary-table th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+}
+
+.summary-table tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+/* ML Headers in table */
+.ml-header,
+.other-header {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  text-align: center;
+  color: #6f6b6b;
+}
+
+.ml-similar-row {
+  background-color: #f7f7f7;
+}
+
+/* Picture Layout */
+.picture-layout {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.results-grid,
+.similar-grid,
+.other-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.apple-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.apple-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.apple-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.apple-card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  color: #333;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.apple-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.default-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Section Headings */
+.main-result-section h3,
+.similar-section h3,
+.other-section h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+  color: var(--heading-color, #777474);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark mode support (optional - assumes global theme toggle sets body class) */
+body.dark-mode {
+  --filter-bg: #1f1f1f;
+  --label-color: #eee;
+  --heading-color: #f0f0f0;
+}
+
+body.dark-mode .apple-card {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark-mode .apple-card h3 {
+  color: #fff;
+}
+
+body.dark-mode .apple-card p {
+  color: #ccc;
+}
+/* Section Headings with theme awareness */
+.main-result-section h3,
+.similar-section h3,
+.other-section h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 25px 0 15px;
+  color: var(--heading-color, #646464);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5px;
+}
+
+/* Optional: theme variable overrides for dark mode */
+body.dark-mode {
+  --heading-color: #f8f5f5;
+}
+
+body.light-mode {
+  --heading-color: #222;
+}

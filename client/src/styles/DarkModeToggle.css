@@ -1,0 +1,63 @@
+/* DarkModeToggle.css */
+
+/* 
+  Light mode (default) variables 
+  (Used when the body does NOT have the .dark class)
+*/
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #007bff; /* Button background color (light mode) */
+  }
+  
+  /* 
+    Dark mode overrides 
+    (Used when the body HAS the .dark class)
+  */
+  .dark {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #444444; /* Button background color (dark mode) */
+  }
+  
+  /* 
+    Apply the variables to the body
+    This ensures all components using these variables will adapt
+  */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* 
+    Example override for apple cards in dark mode.
+    Adjust or add more overrides as needed 
+  */
+  .dark .apple-card,
+  .dark .admin-apple-card {
+    background-color: #333;
+  }
+  
+  .dark .apple-card h3,
+  .dark .apple-card p,
+  .dark .admin-apple-card h3,
+  .dark .admin-apple-card p {
+    color: var(--text-color);
+  }
+  .dark .apple-card,
+  .dark .admin-apple-card {
+    /* Make the card background dark enough for white text */
+    background-color: #333; 
+  }
+  
+  /* Force the text to be white (or any high-contrast color) in dark mode */
+  .dark .apple-card h3,
+  .dark .apple-card p,
+  .dark .admin-apple-card h3,
+  .dark .admin-apple-card p {
+    color: #fff;
+  }
+    

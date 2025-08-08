@@ -1,0 +1,87 @@
+/* Base styling */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* LIGHT MODE VARIABLES */
+:root {
+  /* General theming */
+  --primary-color: #040404;
+  --accent-color: #000000;
+  --background-color: #ffffff;
+  --text-color: #0a0000;
+
+  /* Table headings (light mode) - updated for better contrast */
+  --table-header-bg: #e1e1e1;
+  --table-header-text: #000;
+
+  /* AppleDetails headings (light mode) */
+  --details-heading-bg: #f4f4f4;
+  --details-heading-text: #333;
+
+  /* Table row hover (light mode) */
+  --table-row-hover-bg: #f0f0f0;
+  --table-row-hover-text: #000;
+}
+
+/* Base body styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* DARK MODE OVERRIDES */
+body.dark {
+  /* General theming */
+  --primary-color: #000508;
+  --accent-color: #000000;
+  --background-color: #070707;
+  --text-color: #e0e0e0;
+
+  /* Table headings (dark mode) - updated for better contrast */
+  --table-header-bg: #333;
+  --table-header-text: #fff;
+
+  /* AppleDetails headings (dark mode) */
+  --details-heading-bg: #444;
+  --details-heading-text: #fff;
+
+  /* Table row hover (dark mode) */
+  --table-row-hover-bg: #444; /* or #555 if you want it lighter */
+  --table-row-hover-text: #fff;
+}
+
+/* OPTIONAL: link colors */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.8; /* or use a different color */
+}
+
+/* TABLE HEADER STYLING
+   Force usage of variables, ensure bold/uppercase for better visibility */
+table thead th {
+  background-color: var(--table-header-bg) !important;
+  color: var(--table-header-text) !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px;
+  border-bottom: 2px solid #444; /* Dark border for contrast; optional */
+}
+
+/* TABLE ROW HOVER STYLING
+   Use !important if you have existing rules overriding these */
+table tr:hover td,
+table tr:hover th {
+  background-color: var(--table-row-hover-bg) !important;
+  color: var(--table-row-hover-text) !important;
+}

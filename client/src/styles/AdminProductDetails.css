@@ -1,0 +1,209 @@
+/* AdminProductDetails.css */
+
+/* Container */
+.admin-product-details {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  padding: 0 10px;
+  color: #333; /* Default text color for light mode */
+}
+
+.admin-product-details h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Heading color in light mode */
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.success {
+  color: green;
+  text-align: center;
+}
+
+/* Table styles */
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Table header row (light mode) */
+.details-table th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.details-table th,
+.details-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Field cell background in light mode */
+.field-cell {
+  width: 25%;
+  background: #f9f9f9;
+  font-weight: bold;
+}
+
+/* Row hover effect (light mode) */
+.details-table tr:hover td {
+  background-color: #f0f0f0;
+}
+
+/* Actions buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.actions button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.actions button:hover {
+  opacity: 0.9;
+}
+
+.delete-apple-btn {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+/* Remove field button */
+.remove-field-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-field-btn:hover {
+  background-color: #d62c1a;
+}
+
+/* Images Section */
+.images-section {
+  margin-bottom: 20px;
+}
+
+.images-section h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.admin-details-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(231, 76, 60, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  padding: 0;
+}
+
+.remove-image-btn:hover {
+  background-color: rgba(214, 44, 26, 0.9);
+}
+
+/* Upload new image section */
+.upload-new-image {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.upload-new-image label {
+  margin-right: 10px;
+}
+
+/* ------------------------- */
+/* Dark Mode Overrides       */
+/* (Only apply if you have a */
+/*  body.dark class toggle)  */
+/* ------------------------- */
+body.dark .admin-product-details {
+  color: #ddd; /* Light text in dark mode */
+}
+
+body.dark .admin-product-details h2 {
+  color: #fff;
+}
+
+/* Table header row in dark mode */
+body.dark .details-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Table cells in dark mode */
+body.dark .details-table td {
+  border-color: #444;
+  color: #ddd;
+}
+
+/* Field cell in dark mode */
+body.dark .field-cell {
+  background: #2c2c2c;
+  color: #fff;
+}
+
+/* Row hover effect (dark mode) */
+body.dark .details-table tr:hover td {
+  background-color: #3a3a3a;
+}
+
+/* For buttons, you can keep them the same or adjust background. Example: */
+body.dark .delete-apple-btn {
+  background-color: #c0392b; /* or #e74c3c, etc. */
+}
+
+body.dark .remove-field-btn {
+  background-color: #e74c3c;
+}

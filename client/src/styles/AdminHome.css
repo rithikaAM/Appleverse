@@ -1,0 +1,315 @@
+/* AdminHome.css */
+
+:root {
+  /* Overlay for picture cards in light mode */
+  --card-overlay-bg: rgba(255, 255, 255, 0.8);
+  --card-overlay-text: #000;
+}
+
+body.dark {
+  --card-overlay-bg: rgba(0, 0, 0, 0.8);
+  --card-overlay-text: #fff;
+}
+
+.admin-home-container {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Hero Section with Background Image */
+.hero {
+  background-image: url("../assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.admin-home-content {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Search Bar */
+.admin-search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-search-container input {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Table View Container */
+.admin-summary-table-container {
+  margin: 20px auto;
+  width: 90%;
+  overflow-x: auto;
+}
+
+.admin-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-summary-table th,
+.admin-summary-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.admin-summary-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.admin-summary-table tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+/* Picture View Container */
+.admin-apple-list {
+  width: 100%;
+  display: block;
+}
+
+/* Sections */
+.main-result-section,
+.similar-section,
+.other-section {
+  margin-bottom: 30px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Grid layout for picture view: up to 5 cards per row */
+.results-grid,
+.similar-grid,
+.other-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+}
+
+/* Picture Card in AdminHome */
+.admin-apple-card,
+.apple-card {
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s;
+}
+
+.admin-apple-card:hover,
+.apple-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.admin-apple-card img,
+.apple-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.default-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Text Overlay for Picture Cards */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card-overlay-bg);
+  color: var(--card-overlay-text);
+  padding: 10px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card-overlay h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-overlay p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Edit Button inside Overlay */
+.card-overlay .edit-button {
+  margin-top: 5px;
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.card-overlay .edit-button:hover {
+  background-color: #218838;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+/* Filter Bar (FilterPanel) */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.filter-group select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* ML-Specific Table Styles */
+.ml-header,
+.other-header {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.ml-similar-row {
+  background-color: #f7f7f7;
+}
+
+/* ML-Specific Picture Styles */
+.ml-main-card {
+  border: 2px solid #00070c;
+}
+
+.ml-similar-card {
+  border: 2px solid #888;
+}
+
+/* Edit Button in Table View */
+.edit-button {
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #218838;
+}

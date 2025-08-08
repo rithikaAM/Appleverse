@@ -1,0 +1,161 @@
+/* AdminNavbar.css */
+
+/* Navbar container */
+.admin-navbar {
+  display: flex;                /* enables horizontal layout */
+  align-items: center;          /* vertically center items */
+  justify-content: space-between; /* space items to the ends */
+  background-color: #000;       /* black background */
+  color: #fff;                  /* white text */
+  padding: 10px 20px;           /* spacing around */
+}
+
+/* Left side logo */
+.admin-navbar-logo a {
+  color: #fff;                  /* white text */
+  text-decoration: none;        /* remove underline */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* The nav links container (ul) */
+.admin-navbar-links {
+  display: flex;                /* horizontal layout */
+  list-style: none;             /* remove bullet points */
+  gap: 20px;                    /* spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+/* Each link item */
+.admin-navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.admin-navbar-links li a:hover {
+  color: #22e60c;                  /* hover color */
+}
+
+/* Right side container: includes dark mode + profile icon */
+.admin-navbar-actions {
+  display: flex;                /* horizontal layout */
+  align-items: center;
+  gap: 20px;                    /* spacing between items */
+  position: relative;           /* for dropdown positioning if needed */
+}
+
+/* Dark Mode Toggle Container (if you want to style it) */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* The switch + slider (same as your existing code) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+/* Slider background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* Slider knob */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* When checked, move knob */
+.switch input:checked + .slider {
+  background-color: #17ff02;
+}
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Round the slider fully */
+.slider.round {
+  border-radius: 34px;
+}
+
+/* The label next to the toggle */
+.mode-label {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Profile Avatar (if using the avatar approach) */
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #6200ea; /* or any accent color */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Profile dropdown menu (if using) */
+.profile-menu {
+  position: absolute;
+  top: 60px; /* adjust based on navbar height */
+  right: 0;
+  background: #fff;
+  color: #090909;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  min-width: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+}
+.profile-menu a,
+.profile-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 4px 0;
+  background: none;
+  border: none;
+  color: #1c09ec;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 0;
+}
+.profile-menu a:hover,
+.profile-menu button:hover {
+  background: #f2f2f2;
+  border-radius: 4px;
+}
